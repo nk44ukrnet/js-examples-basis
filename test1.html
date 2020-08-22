@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test1</title>
+</head>
+<body>
+<p style="text-align: center;"><strong><span style="color: #ff0000;">Старт з 1 вересня</span></strong></p>
+<p>Дистанційні заняття - це навчання, яке відбувається онлайн через живе спілкування з вчителем. Під час занять ви можете не лише слухати й дивитися, а запитувати, обговорювати та отримувати зворотній зв&rsquo;язок. <br /><br />Приєднуйтесь до розвиваючих та інтерактивних онлайн-уроків з конструювання яскравих моделей LEGO&reg;, гейміфікацією, руханкою та командною роботою!<br /><br />Для участі потрібен ноутбук чи планшет, встановлена програма Zoom та підключення до уроку.</p>
+<p style="text-align: center;"><strong>Оберіть курс за віком дитини</strong>:</p>
+<div style="max-width: 600px; min-width: 300px; margin: 0 auto; background-color: #fff; padding: 0px; margin-top: 0; display:block;">
+    <div class="form-group">
+        <div class="col-sm-12"><select id="courseStorage" class="form-control sltc" name="course_id">
+            <option disabled="disabled" selected="selected" value="">Оберіть вік дитини</option>
+            <option value="3">3 роки</option>
+            <option value="4">4 роки</option>
+            <option value="5">5 років</option>
+            <option value="6">6 років</option>
+            <option value="7">7 років</option>
+            <option value="8">8 років</option>
+            <option value="9">9 років</option>
+            <option value="10">10 років</option>
+            <option value="11">11 років</option>
+            <option value="12">12 років</option>
+            <option value="13">13 років</option>
+            <option value="14">14 років</option>
+            <option value="15">15 років</option>
+            <option value="16">16 років</option>
+        </select></div>
+    </div>
+</div>
+<div id="ageContent">
+    <div id="headingPlace">&nbsp;</div>
+    <div id="coursesPlace">&nbsp;</div>
+</div>
+<script>// <![CDATA[
+const coursesData = {
+    j1: '<a href="https://inventor.com.ua/online-junior/online-junior1.html">Курс "Наука про світ" та "Ранній розвиток" (3-5 років)</a><br>',
+    j2: '<a href="https://inventor.com.ua/online-junior/online-junior2.html">Курс "Цікава інженерія" та "Початкова механіка" (5-6 років)</a><br>',
+    j3: '<a href="https://inventor.com.ua/online-junior/online-junior4.html">Курс "Програмування і англійська для дошкільнят" (4-6 років)</a><br>',
+    j4: '<a href="https://inventor.com.ua/online-junior/online-junior5.html">Курс "Програмування Scratch Junior" (5-6 років)</a><br>',
+
+    m1: '<a href="https://inventor.com.ua/online-middle/online-middle1.html">Курс "Програмування WeDo 2.0" (Основи робототехніки) (1й клас+)</a><br>',
+    m2: '<a href="https://inventor.com.ua/online-middle/online-middle3.html">Курс "Програмування Scratch" (Робототехніка Scratch) (2й клас+)</a><br>',
+    m3: '<a href="https://inventor.com.ua/online-middle/online-middle4.html">Курс "Пізнаю світ з Minecraft: EE" (2й клас+)</a><br>',
+    m4: '<a href="https://inventor.com.ua/online-middle/online-junior6.html">Курс "Програмування з Minecraft: EE" (3й клас+)</a><br>',
+    m5: '<a href="https://inventor.com.ua/online-middle/online-middle5.html">Курс "Архітектура online" (3й клас+)</a><br>',
+    m6: '<a href="https://inventor.com.ua/online-middle/online-middle7.html">Курс "Game LAB" (8+ років)</a><br>',
+    m7: '<a href="https://inventor.com.ua/online-middle/online-middle2.html">Курс "Science ONLINE" (4й клас+)</a><br>',
+
+    s1: '<a href="https://inventor.com.ua/online-senior/online-senior3.html">Курс "Проєктування роботів в LEGO Digital Design" (10+ років)</a><br>',
+    s2: '<a href="https://inventor.com.ua/online-senior/online-senior4.html">Курс "GameDev: Adventure" (10+ років)</a><br>',
+    s3: '<a href="https://inventor.com.ua/online-senior/online-senior1.html">Курс "Developer Web Online" (11+ років)</a><br>',
+    s4: '<a href="https://inventor.com.ua/online-senior/online-senior2.html">Курс GameDev Online (12+ років)</a><br>',
+};
+courseStorage.addEventListener('input', e =>{
+    let selectValue = courseStorage.value;
+    headingPlace.innerHTML = 'Для цього віку знайдені такі курси:';
+    // console.log(selectValue);
+    switch (selectValue) {
+        case '3':
+            coursesPlace.innerHTML = coursesData.j1;
+            break;
+        case '4':
+            coursesPlace.innerHTML = coursesData.j1;
+            coursesPlace.innerHTML += coursesData.j3;
+            break;
+        case '5':
+            coursesPlace.innerHTML = coursesData.j1;
+            coursesPlace.innerHTML += coursesData.j2;
+            coursesPlace.innerHTML += coursesData.j3;
+            coursesPlace.innerHTML += coursesData.j4;
+            break;
+        case '6':
+            coursesPlace.innerHTML = coursesData.j2;
+            coursesPlace.innerHTML += coursesData.j3;
+            coursesPlace.innerHTML += coursesData.j4;
+            coursesPlace.innerHTML += coursesData.m1;
+            break;
+        case '7':
+            coursesPlace.innerHTML = coursesData.m1;
+            coursesPlace.innerHTML += coursesData.m2;
+            coursesPlace.innerHTML += coursesData.m3;
+            break;
+        case '8':
+            coursesPlace.innerHTML = coursesData.m1;
+            coursesPlace.innerHTML += coursesData.m2;
+            coursesPlace.innerHTML += coursesData.m3;
+            coursesPlace.innerHTML += coursesData.m4;
+            coursesPlace.innerHTML += coursesData.m5;
+            coursesPlace.innerHTML += coursesData.m6;
+            break;
+        case '9':
+        case '10':
+            coursesPlace.innerHTML = coursesData.m1;
+            coursesPlace.innerHTML += coursesData.m2;
+            coursesPlace.innerHTML += coursesData.m3;
+            coursesPlace.innerHTML += coursesData.m4;
+            coursesPlace.innerHTML += coursesData.m5;
+            coursesPlace.innerHTML += coursesData.m6;
+            coursesPlace.innerHTML += coursesData.m7;
+            coursesPlace.innerHTML += coursesData.s1;
+            coursesPlace.innerHTML += coursesData.s2;
+            break;
+        case '11':
+            coursesPlace.innerHTML = coursesData.s1;
+            coursesPlace.innerHTML += coursesData.s2;
+            coursesPlace.innerHTML += coursesData.s3;
+            break;
+        case '12':
+        case '13':
+        case '14':
+        case '15':
+        case '16':
+            coursesPlace.innerHTML = coursesData.s1;
+            coursesPlace.innerHTML += coursesData.s2;
+            coursesPlace.innerHTML += coursesData.s3;
+            coursesPlace.innerHTML += coursesData.s4;
+            break;
+    }
+});
+// ]]></script>
+<!--<div style="max-width: 600px; min-width: 300px; margin: 0 auto; background-color: #fff; padding: 0px; margin-top:0;">-->
+<!--    <div class="form-group">-->
+<!--        <div class="col-sm-12"><select id="courseStorage" class="form-control sltc" name="course_id">-->
+<!--            <option disabled="disabled" selected="selected" value="">Оберіть курс за віком дитини.</option>-->
+<!--            <option value="3">3 роки</option>-->
+<!--            <option value="4">4 роки</option>-->
+<!--            <option value="5">5 років</option>-->
+<!--            <option value="6">6 років</option>-->
+<!--            <option value="7">7 років</option>-->
+<!--            <option value="8">8 років</option>-->
+<!--            <option value="9">9 років</option>-->
+<!--            <option value="10">10 років</option>-->
+<!--            <option value="11">11 років</option>-->
+<!--            <option value="12">12 років</option>-->
+<!--            <option value="13">13 років</option>-->
+<!--            <option value="14">14 років</option>-->
+<!--            <option value="15">15 років</option>-->
+<!--            <option value="16">16 років</option>-->
+<!--        </select></div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div id="ageContent">-->
+<!--    <div id="headingPlace">&nbsp;</div>-->
+<!--    <div id="coursesPlace">&nbsp;</div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--    const coursesData = {-->
+<!--        j1: '<a href="https://inventor.com.ua/online-junior/online-junior1.html">Курс "Наука про світ" та "Ранній розвиток" (3-5 років)</a><br>',-->
+<!--        j2: '<a href="https://inventor.com.ua/online-junior/online-junior2.html">Курс "Цікава інженерія" та "Початкова механіка" (5-6 років)</a><br>',-->
+<!--        j3: '<a href="https://inventor.com.ua/online-junior/online-junior4.html">Курс "Програмування і англійська для дошкільнят" (4-6 років)</a><br>',-->
+<!--        j4: '<a href="https://inventor.com.ua/online-junior/online-junior5.html">Курс "Програмування Scratch Junior" (5-6 років)</a><br>',-->
+
+<!--        m1: '<a href="https://inventor.com.ua/online-middle/online-middle1.html">Курс "Програмування WeDo 2.0" (Основи робототехніки) (1й клас+)</a><br>',-->
+<!--        m2: '<a href="https://inventor.com.ua/online-middle/online-middle3.html">Курс "Програмування Scratch" (Робототехніка Scratch) (2й клас+)</a><br>',-->
+<!--        m3: '<a href="https://inventor.com.ua/online-middle/online-middle4.html">Курс "Пізнаю світ з Minecraft: EE" (2й клас+)</a><br>',-->
+<!--        m4: '<a href="https://inventor.com.ua/online-middle/online-junior6.html">Курс "Програмування з Minecraft: EE" (3й клас+)</a><br>',-->
+<!--        m5: '<a href="https://inventor.com.ua/online-middle/online-middle5.html">Курс "Архітектура online" (3й клас+)</a><br>',-->
+<!--        m6: '<a href="https://inventor.com.ua/online-middle/online-middle7.html">Курс "Game LAB" (8+ років)</a><br>',-->
+<!--        m7: '<a href="https://inventor.com.ua/online-middle/online-middle2.html">Курс "Science ONLINE" (4й клас+)</a><br>',-->
+
+<!--        s1: '<a href="https://inventor.com.ua/online-senior/online-senior3.html">Курс "Проєктування роботів в LEGO Digital Design" (10+ років)</a><br>',-->
+<!--        s2: '<a href="https://inventor.com.ua/online-senior/online-senior4.html">Курс "GameDev: Adventure" (10+ років)</a><br>',-->
+<!--        s3: '<a href="https://inventor.com.ua/online-senior/online-senior1.html">Курс "Developer Web Online" (11+ років)</a><br>',-->
+<!--        s4: '<a href="https://inventor.com.ua/online-senior/online-senior2.html">Курс GameDev Online (12+ років)</a><br>',-->
+<!--    };-->
+<!--    courseStorage.addEventListener('input', e =>{-->
+<!--        let selectValue = courseStorage.value;-->
+<!--        headingPlace.innerHTML = 'Для цього віку знайдені такі курси:';-->
+<!--        // console.log(selectValue);-->
+<!--        switch (selectValue) {-->
+<!--            case '3':-->
+<!--                coursesPlace.innerHTML = coursesData.j1;-->
+<!--                break;-->
+<!--            case '4':-->
+<!--                coursesPlace.innerHTML = coursesData.j1;-->
+<!--                coursesPlace.innerHTML += coursesData.j3;-->
+<!--                break;-->
+<!--            case '5':-->
+<!--                coursesPlace.innerHTML = coursesData.j1;-->
+<!--                coursesPlace.innerHTML += coursesData.j2;-->
+<!--                coursesPlace.innerHTML += coursesData.j3;-->
+<!--                coursesPlace.innerHTML += coursesData.j4;-->
+<!--                break;-->
+<!--            case '6':-->
+<!--                coursesPlace.innerHTML = coursesData.j2;-->
+<!--                coursesPlace.innerHTML += coursesData.j3;-->
+<!--                coursesPlace.innerHTML += coursesData.j4;-->
+<!--                coursesPlace.innerHTML += coursesData.m1;-->
+<!--                break;-->
+<!--            case '7':-->
+<!--                coursesPlace.innerHTML = coursesData.m1;-->
+<!--                coursesPlace.innerHTML += coursesData.m2;-->
+<!--                coursesPlace.innerHTML += coursesData.m3;-->
+<!--                break;-->
+<!--            case '8':-->
+<!--                coursesPlace.innerHTML = coursesData.m1;-->
+<!--                coursesPlace.innerHTML += coursesData.m2;-->
+<!--                coursesPlace.innerHTML += coursesData.m3;-->
+<!--                coursesPlace.innerHTML += coursesData.m4;-->
+<!--                coursesPlace.innerHTML += coursesData.m5;-->
+<!--                coursesPlace.innerHTML += coursesData.m6;-->
+<!--                break;-->
+<!--            case '9':-->
+<!--                coursesPlace.innerHTML = coursesData.m1;-->
+<!--                coursesPlace.innerHTML += coursesData.m2;-->
+<!--                coursesPlace.innerHTML += coursesData.m3;-->
+<!--                coursesPlace.innerHTML += coursesData.m4;-->
+<!--                coursesPlace.innerHTML += coursesData.m5;-->
+<!--                coursesPlace.innerHTML += coursesData.m6;-->
+<!--                coursesPlace.innerHTML += coursesData.m7;-->
+<!--                break;-->
+<!--            case '10':-->
+<!--                coursesPlace.innerHTML = coursesData.m1;-->
+<!--                coursesPlace.innerHTML += coursesData.m2;-->
+<!--                coursesPlace.innerHTML += coursesData.m3;-->
+<!--                coursesPlace.innerHTML += coursesData.m4;-->
+<!--                coursesPlace.innerHTML += coursesData.m5;-->
+<!--                coursesPlace.innerHTML += coursesData.m6;-->
+<!--                coursesPlace.innerHTML += coursesData.m7;-->
+<!--                coursesPlace.innerHTML += coursesData.s1;-->
+<!--                coursesPlace.innerHTML += coursesData.s2;-->
+<!--                break;-->
+<!--            case '11':-->
+<!--                coursesPlace.innerHTML = coursesData.s1;-->
+<!--                coursesPlace.innerHTML += coursesData.s2;-->
+<!--                coursesPlace.innerHTML += coursesData.s3;-->
+<!--                break;-->
+<!--            case '12':-->
+<!--            case '13':-->
+<!--            case '14':-->
+<!--            case '15':-->
+<!--            case '16':-->
+<!--                coursesPlace.innerHTML = coursesData.s1;-->
+<!--                coursesPlace.innerHTML += coursesData.s2;-->
+<!--                coursesPlace.innerHTML += coursesData.s3;-->
+<!--                coursesPlace.innerHTML += coursesData.s4;-->
+<!--                break;-->
+<!--        }-->
+<!--    });-->
+<!--</script>-->
+
+
+<script>
+    const nums = [45,23,34,7,5];
+    console.log(Math.max(...nums));
+
+    function giveMeMore() {
+        console.log('a', arguments);
+        console.log('b', arguments);
+        console.log('c', arguments);
+        console.log('d', arguments);
+    }
+
+    const colors = ['red', 'orange', 'yellow', 'green'];
+    const colors1 = ['orange', 'dark', 'pale', 'blue'];
+    const colors2 = ['black', 'azure', 'white', 'gray'];
+const str = 'GOAT';
+
+const feline = {
+    legs: 4,
+    family: 'Felidae'
+};
+const canie = {
+    family: 'Caninae',
+    furry: true
+};
+const joejoe = {...feline, ...canie};
+
+//REST
+    function sum() {
+        const argsArray = [...arguments];
+    return argsArray.reduce((total, currVal) => {
+        return total + currVal;
+    })
+    }
+function fullName(first, last, ...titles) {
+console.log(`${first} ${last}. Your titles: ${titles}`);
+}
+function sum1(...nums) {
+        return nums.reduce((total, current) => {
+            return total + current;
+        })
+}
+//descructure
+
+    const racers = [
+        'vasa1',
+        'vasa2',
+        'vasa3',
+        'vasa4',
+        'vasa5'
+    ];
+
+    const [racer1,racer2,racer3, ...others] = racers;
+
+    const runner = {
+        first: 'Elidu',
+        last: 'Faza',
+        counrty: 'Kenya',
+        title: 'some title III'
+    };
+    function print({first, last, title}) {
+        console.log(`${first} ${last} ${title}`);
+    }
+    const response = [
+        'HTTP/1.1',
+        '200 OK',
+        'application/json'
+    ];
+
+    function parseResponse([protocol, statusCode, contentType]) {
+        console.log(`Status: ${statusCode}`);
+    }
+
+   const role = 'host',
+       person = 'Jools Holland',
+       role2 = 'Director',
+       person2 = 'James Cameon';
+
+    const team = {
+        [role]: person,
+        [role2]: person2
+    };
+
+    const addProrp = (obj, k, v) => {
+        return {
+            ...obj,
+            [k]: v
+        }
+    };
+
+    function sayHi(){
+        console.log('Hi');
+        console.log(this);
+    }
+
+    const p3rson = {
+        first: 'Cherlyn',
+        last: 'Sarkisian',
+        nickName: 'Cher',
+        fullName(){
+            const {first, last, nickName} = this;
+            return `${first} ${last} AKA ${nickName}`;
+        },
+        printBio(){
+            const fullName = this.fullName();
+            console.log(`${fullName} is a person!`);
+        }
+    }
+
+    const annoyer = {
+        phrases: ['FUCK', 'DICK', 'HONEST SHIT', 'DICKMAN', 'COCK SUCKER', 'BLOW MY SHIT'],
+        pickPhrase(){
+          const {phrases} = this;
+            const randomPhrase = Math.floor(Math.random() * phrases.length);
+            return phrases[randomPhrase];
+        },
+        start(){
+            this.timerId = setInterval(() => {
+            console.log(this.pickPhrase());
+        }, 200);
+        },
+        stop(){
+           clearInterval(this.timerId);
+        }
+    };
+    //annoyer.start();
+    // annoyer.stop();
+
+    //DECK PRACTISE
+
+
+    //const myDeck = mainDeck();
+   //const card1 = drawCard(myDeck);
+
+/*    const myDeck = {
+       deck: [],
+        drawnCards: [],
+        suits: ['hearts', 'diamonds', 'spades', 'clubs'],
+        values: values = '2,3,4,5,6,7,8,9,10,J,Q,K,A',
+        initialiseDeck(){
+           const {values, suits, deck} = this;
+            for (let value of values.split(',')) {
+                for(let suit of suits) {
+                    deck.push({value, suit});
+                }
+            }
+            //return deck;
+        },
+        drawCard(){
+         const card = this.deck.pop();
+         this.drawnCards.push(card);
+         return card;
+        },
+        drawMultiple(numCards){
+           const cards = [];
+           for(let i = 0; i < numCards; i++) {
+               cards.push(this.drawCard());
+           }
+           return cards;
+        },
+        shuffle() {
+           const {deck} = this;
+        for(let i = deck.length -1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [deck[i],  deck[j]] = [deck[j], deck[i]];
+        }
+        // console.log(arr);
+        }
+    };*/
+
+    const makeDeck = () => {
+        return {
+            deck: [],
+            drawnCards: [],
+            suits: ['hearts', 'diamonds', 'spades', 'clubs'],
+            values: values = '2,3,4,5,6,7,8,9,10,J,Q,K,A',
+            initialiseDeck(){
+                const {values, suits, deck} = this;
+                for (let value of values.split(',')) {
+                    for(let suit of suits) {
+                        deck.push({value, suit});
+                    }
+                }
+                //return deck;
+            },
+            drawCard(){
+                const card = this.deck.pop();
+                this.drawnCards.push(card);
+                return card;
+            },
+            drawMultiple(numCards){
+                const cards = [];
+                for(let i = 0; i < numCards; i++) {
+                    cards.push(this.drawCard());
+                }
+                return cards;
+            },
+            shuffle() {
+                const {deck} = this;
+                for(let i = deck.length -1; i > 0; i--) {
+                    let j = Math.floor(Math.random() * (i + 1));
+                    [deck[i],  deck[j]] = [deck[j], deck[i]];
+                }
+                // console.log(arr);
+            }
+        };
+    }
+
+    const myDeck = makeDeck();
+    myDeck.initialiseDeck();
+    myDeck.shuffle();
+    const h1 = myDeck.drawMultiple(2);
+    const h2 = myDeck.drawMultiple(2);
+    const h3 = myDeck.drawMultiple(5);
+
+    const deck2 = makeDeck();
+    deck2.initialiseDeck();
+
+
+
+
+</script>
+</body>
+</html>

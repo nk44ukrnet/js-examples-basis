@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <style>
+        * {
+            -ms-box-sizing:content-box;
+            -moz-box-sizing:content-box;
+            -webkit-box-sizing:content-box;
+            box-sizing:content-box;
+        }
+        body {
+            padding: 10px;
+            font-family: 'Stolzl', sans-serif;
+            overflow-y: scroll;
+        }
+        a {
+            color: dodgerblue;
+            text-decoration: none;
+        }
+        a:hover {
+            color: cornflowerblue;
+            text-decoration: underline;
+        }
+        .outer_wrapper {
+            max-width: 812px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .top_img_wrap {
+            max-width: 638px;
+            margin: 0 auto;
+        }
+        .top_img_wrap img {
+            width: 100%;
+        }
+        input, select, select option {
+            padding: 5px;
+            width: 250px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: block;
+            color: #555;
+        }
+        .red {
+            color: red;
+        }
+        label {
+            display: block;
+            color: gray;
+        }
+        .btn-next {
+            margin: 15px 0;
+            display: inline-block;
+            background: red;
+            color: #ffffff;
+            border: 0;
+            border-radius: 5px;
+            font-size: 18px;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+        .btn-next:hover {
+            color: white;
+            text-decoration: none;
+        }
+        .small {
+            color: #555;
+            font-size:12px;
+        }
+        .check {
+            display: inline;
+            width: auto;
+            margin: 5px;
+            padding: 5px;
+            vertical-align: top;
+            min-width: 10px;
+        }
+        .mb-small {
+            margin-bottom: 20px;
+        }
+        .nameInsert {
+            text-transform: capitalize;
+            font-weight: bold;
+            color: green;
+        }
+        .scale {
+            width: 0;
+            height: 30px;
+            background: #006fb9;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 812px;
+        }
+
+        .link_to_course {
+            background-color: red;
+            display: block;
+            padding: 15px 25px;
+            margin: 15px auto;
+            max-width: 370px;
+            color: white;
+            border-radius: 15px;
+            transition: all .25s ease;
+        }
+        .link_to_course:hover {
+            backface-visibility: hidden;
+            color: white;
+            transform: translateY(5px);
+            text-decoration: none;
+        }
+        section {
+            display: none; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! none */
+        }
+        .section_active {
+            display: block;
+        }
+        .top_img_wrap2 {
+            max-width: 812px;
+            overflow: hidden;
+            background-image: url('img/test_empty1-01.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .iw2r {
+            position: relative;
+            height: 600px;
+        }
+        .cloud {
+            max-width: 330px;
+            position: absolute;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 1px 4px 5px #eee;
+            padding: 10px;
+        }
+        .cloud1 {
+            top: 50px;
+            left: 5px;
+            z-index: 1;
+        }
+        .cloud2 {
+            top: 300px;
+            left: 15px;
+            z-index: 2;
+        }
+        .cloud3 {
+            top: 50px;
+            left: 400px;
+        }
+        .cloud4 {
+            left: 450px;
+            top: 400px;
+        }
+
+        /*.top_img_wrap2 picture {*/
+        /*    width: 100%;*/
+        /*}*/
+        /*.top_img_wrap2 img {*/
+        /*    width: 100%;*/
+        /*}*/
+        #answers1, #answers2 {
+            color: dodgerblue;
+        }
+        @media (max-width: 768px) {
+            .scale {
+                font-size: 14px;
+            }
+            .outer_wrapper {
+                max-width: 340px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            .iw2r {
+                max-width: 340px;
+                background-image: url('img/test_empty1-02.png');
+            }
+            .cloud1, .cloud2, .cloud3, .cloud4 {
+                position: static;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="outer_wrapper">
+    <form name="to-ggl-sheet"> <!-- form -->
+
+        <div class="top_img_wrap">
+            <img src="img/top.jpg" alt="top" >
+        </div>
+        <h1 style="text-align: center">Який потенціал має ваша дитина?</h1>
+        <section class="section1 section_active">
+            <p>
+                Кожна дитина - талановита та обдарована.
+                <br><br>
+                Важливо тільки зрозуміти індивідуальний набір якостей та умінь, щоб допомогти їй максимально розкрити особистісний потенціал.
+                <br><br>
+                Мета цієї анкети - допомогти саме вам, батьки, визначитися із напрямами та шляхами розвитку обдарованості дитини. У результаті 10-хвилинного анкетування ви отримаєте картку персонального маршруту успіху. Дізнайтесь сильні сторони своєї дитини!
+            </p>
+            <label for="kidName">Прізвище та ім`я дитини <span class="red">*</span></label>
+            <input type="text" id="kidName" name="name" required>
+            <select name="age" id="age" required>
+                <option value="" selected>Оберіть вік дитини</option>
+                <option value="3">3 роки</option>
+                <option value="4">4 роки</option>
+                <option value="5">5 років</option>
+                <option value="6">6 років</option>
+                <option value="7">7 років</option>
+            </select>
+            <a class="btn-next" id="next1">Далі</a>
+        </section>
+
+        <section class="section2">
+            <h2>Оберіть на скільки у вашої дитини проявлені наступні види талантів</h2>
+            <div class="top_img_wrap">
+                <img src="img/i1.jpg" alt="Image">
+            </div>
+            <label for="q1">
+                1.   Дитина охоче фантазує, малює, ліпить, створює оригінальні композиції, кулінарні шедеври, бачить незвичайне у простих речах. <span class="red">*</span>
+                <br>
+                <span class="small">1 - не проявляє художній потенціал</span>
+                <br>
+                <span class="small">10 - максимально проявляє художній потенціал</span>
+            </label>
+            <select name="q1" id="q1" required>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <hr>
+            <div class="top_img_wrap">
+                <img src="img/i2.jpg" alt="Image">
+            </div>
+            <label for="q2">
+                2.  Дитина спостережлива, допитлива, любить читати або коли їй читають книги, добре міркує, розуміє причини ситуацій, має гарну пам'ять.
+                <span class="red">*</span>
+                <br>
+                <span class="small">1 - не проявляє інтелектуальний потенціал</span>
+                <br>
+                <span class="small">
+10 - максимально проявляє інтелектуальний потенціал</span>
+            </label>
+            <select name="q2" id="q2" required>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <hr>
+            <div class="top_img_wrap">
+                <img src="img/i3.jpg" alt="Image">
+            </div>
+            <label for="q3">
+                3.  Дитина енергійна, активна, рухлива, швидка, витривала і спритна, любить грати в активні ігри.
+                <span class="red">*</span>
+                <br>
+                <span class="small">1 - не проявляє фізичний потенціал</span>
+                <br>
+                <span class="small">10 - максимально проявляє фізичний потенціал</span>
+            </label>
+            <select name="q3" id="q3" required>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <hr>
+            <div class="top_img_wrap">
+                <img src="img/i7.jpg" alt="Image">
+            </div>
+            <label for="q4">
+                4.   Дитина відповідальна, впевнена, комунікабельна та ініціативна у взаємодії із дітьми та дорослими; полюбляє керувати іграми і заняттями інших.
+                <span class="red">*</span>
+                <br>
+                <span class="small">1 - не проявляє лідерський потенціал</span>
+                <br>
+                <span class="small">10 - максимально проявляє лідерський потенціал</span>
+
+            </label>
+            <select name="q4" id="q4" required>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <hr>
+            <div class="top_img_wrap">
+                <img src="img/i5.jpg" alt="Image">
+            </div>
+            <label for="q5">
+                5.  Дитина швидко, легко, інтуїтивно користується сучасними ІТ-технологіями, цікавиться технікою, конструюванням, досліджує механізми і поломки.
+                <span class="red">*</span>
+                <br>
+                <span class="small">1 - не проявляє технічний потенціал</span>
+                <br>
+                <span class="small">10 - максимально проявляє технічний потенціал</span>
+            </label>
+            <select name="q5" id="q5" required>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <hr>
+            <div class="top_img_wrap">
+                <img src="img/i4.jpg" alt="Image">
+            </div>
+            <label for="q6">
+                6. Дитина любить слухати музику, підспівувати, танцювати, перевтілюватись у різних персонажів, передаючи почуття через тональність, міміку, жести, голос, рухи, викликати емоційні реакції.
+                <span class="red">*</span>
+                <br>
+                <span class="small">1 - не проявляє артистичний потенціал</span>
+                <br>
+                <span class="small">10 - максимально проявляє артистичний потенціал</span>
+            </label>
+            <select name="q6" id="q6" required>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <hr>
+            <div class="top_img_wrap">
+                <img src="img/i6.jpg" alt="Image">
+            </div>
+            <label for="q7">
+                7.  Дитина досліджує, нестандартно мислить і пропонує оригінальні рішення ситуацій, винахідлива, генерує нові ідеї, полюбляє цікаві експерименти, хімічні перетворення.
+                <span class="red">*</span>
+                <br>
+                <span class="small">1 - не проявляє творчий потенціал</span>
+                <br>
+                <span class="small">10 - максимально проявляє творчий потенціал</span>
+            </label>
+            <select name="q7" id="q7" required>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <hr>
+            <div class="top_img_wrap">
+                <img src="img/i8.jpg" alt="Image">
+            </div>
+            <label class="mb-small">
+                Оберіть ті якості, які б ви хотіли розвивати у вашої дитини? (можете обрати декілька варіантів)
+                <br>
+            </label>
+            <div class="group">
+                <input type="checkbox" id="check1" name="check1a" class="check check-checkbox" value="+">
+                <label class="check" for="check1">Математичні навички, алгоритмічне мислення, інженерні навички, науково-технічну грамотність, навички створення програм і алгоритмів</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="check2" name="check2a" class="check check-checkbox" value="+">
+                <label class="check" for="check2">Комунікативні навички, креативність, критичне мислення</label>
+            </div>
+<!--            <div class="group">-->
+<!--                <input type="checkbox" id="check3" name="check3a" class="check check-checkbox" value="Підкорювач(ка) точних наук і грамоти)">-->
+<!--                <label class="check" for="check3">Математичні навички, навички читання по складам, словам, розвиток усного і письмового мовлення, знання букв, звуків</label>-->
+<!--            </div>-->
+<!--            <div class="group">-->
+<!--                <input type="checkbox" id="check4" name="check4a" class="check check-checkbox" value="+">-->
+<!--                <label class="check" for="check4">Комунікативні навички, креативність, критичне мислення</label>-->
+<!--            </div>-->
+            <p class="red" id="checkBoxStatus"></p>
+            <a class="btn-next" id="next2">Далі</a>
+        </section>
+        <section class="section3">
+            <label for="city">З якого ви міста? <span class="red">*</span></label>
+            <input type="text" id="city" name="city" required>
+            <label for="visit">Чи відвідуєте ви зараз STEM школу INVENTOR? <span class="red">*</span></label>
+            <select name="visit" id="visit" required>
+                <option value="" selected>Оберіть відповідь</option>
+                <option value="так">Так, відвідую</option>
+                <option value="ні">Ні, не відвідую</option>
+            </select>
+            <label for="tel">Контактний телефон <span class="red">*</span></label>
+            <input type="tel" id="tel" name="tel" placeholder="+38(" required>
+            <label for="email">Вкажіть, будь ласка, електронну скриньку для отримання результатів <span class="red">*</span></label>
+            <input type="email" id="email" name="email" required>
+            <button class="btn-next" id="next3" type="submit">Отримати результат</button>
+        </section>
+        <section class="section4 section-result">
+            <h2 style="text-align: center">
+                Вітаємо батьків чудової та обдарованої дитини!
+            </h2>
+            <p>
+                <span class="nameInsert"></span> має унікальні якості та таланти, які стануть вірними помічниками на шляху до майбутнього успіху.
+                <br>
+               <span id="answers1holder">За результатами анкетування ваша дитина проявляє себе як справжній(ня): <span id="answers1"></span> </span>
+                <br>
+                <span id="forSure"> Це точно сильні сторони майбутньої відомої успішної особистості! </span>
+                <br>
+                <span id="answers2holder">Щоб стати ким захочеться, ваша дитина може обрати для себе такі напрями розвитку потенціалу: <span id="answers2"></span></span>
+            </p>
+            <div class="top_img_wrap">
+                <img src="img/invImg.jpg" alt="INVENTOR">
+            </div>
+            <h2>Потенціал вашої дитини</h2>
+            <div class="flex">
+                <div class="flex-item">1. Художній
+                    <div class="scale" id="scale1"></div>
+                </div>
+                <div class="flex-item">2. Інтелектуальний
+                    <div class="scale" id="scale2"></div>
+                </div>
+                <div class="flex-item">3. Фізичний
+                    <div class="scale" id="scale3"></div>
+                </div>
+                <div class="flex-item">4. Лідерський
+                    <div class="scale" id="scale4"></div>
+                </div>
+                <div class="flex-item">5. Технічний
+                    <div class="scale" id="scale5"></div>
+                </div>
+                <div class="flex-item">6. Артистичний
+                    <div class="scale" id="scale6"></div>
+                </div>
+                <div class="flex-item">7. Творчий
+                    <div class="scale" id="scale7"></div>
+                </div>
+            </div>
+            <p>На основі ваших відповідей і бажання всебічно гармонійно розкривати потенціал дитини ми створили картку персонального маршруту успіху та підібрали курси, які у цьому допоможуть.
+                <br><br>
+                Маршрут успіху дитини:
+            </p>
+            <div class="top_img_wrap2 iw2r">
+                <div class="cloud cloud1">
+                    <h2>Крок 1.</h2>
+                    <p>
+                        Мета: максимально розкрити потенціал дитини
+                    </p>
+                </div>
+                <div class="cloud cloud2">
+                    <h2>Крок 2. Обираємо курс:</h2>
+                    <p class="coursesInResult">
+
+                    </p>
+                </div>
+                <div class="cloud cloud3">
+                    <h2>Крок 3. Розвиваємо:</h2>
+                    <p id="develop">
+
+                    </p>
+                </div>
+                <div class="cloud cloud4">
+                    <h2>Крок 4. Результат:</h2>
+                    <p>
+                        Розвинені комунікативні навчики, креативність, критичне мислення, більш розкритий
+                        інтелектуальний, технічний, лідерський, творчий потенціал
+                    </p>
+                </div>
+                <!--                <picture>-->
+                <!--                    <source media="(max-width:768px)" srcset="img/test-02.png">-->
+                <!--                    <img src="img/test-01.png" alt="image">-->
+                <!--                </picture>-->
+            </div>
+            <p>Щоб максимально розкривати особистісний потенціал вашої дитини, ми рекомендуємо відвідати курси: <br>
+                <span class="coursesInResult">
+
+                </span>
+            </p>
+            <p>Детальніше про <a href="https://inventor.com.ua/summer-courses-remote/" target="_blank">курси</a></p>
+            <a href="https://inventor.com.ua/registration-forms/sign-for-summer-courses-remote.html" class="link_to_course">Подати заявку на пробне заняття з курсу</a>
+            <div class="top_img_wrap">
+                <img src="http://vyn.inventor.com.ua/images/cikavo.jpg" alt="interesting">
+            </div>
+
+        </section>
+
+    </form> <!-- end form -->
+</div>
+
+<script src="https://unpkg.com/imask@6.0.3/dist/imask.js"></script>
+<script>
+    //phone mask
+    var phoneMask = IMask(document.getElementById('tel'), {
+        mask: '+{38}(000)000-00-00'
+    });
+
+    //test if conditional
+    let sessnionsDiv = document.querySelectorAll('section'),
+        nameInsert = document.querySelectorAll('.nameInsert'),
+        headingH1 = document.querySelector('h1');
+
+    //remove display class from section function below
+    function sectionActiveRemove() {
+        sessnionsDiv.forEach(function (item) {
+            item.classList.remove('section_active');
+        })
+    }
+    //try step 2 of test
+    next1.addEventListener('click', function () {
+        if(kidName.value === '') {
+            kidName.style.borderColor = 'red';
+        } else if (age.value === '') {
+            age.style.borderColor = 'red';
+        } else {
+            sectionActiveRemove();
+            sessnionsDiv[1].classList.add('section_active');
+        }
+    });
+
+    //try step 3 of test
+    let checkboxNotCheckedCounter = 0;
+    let checkAlertBorder = document.querySelector('.mb-small');
+    let checkboxesSelector = document.querySelectorAll('.check-checkbox');
+    next2.addEventListener('click', function () {
+        for(let i = 0; i <checkboxesSelector.length; i++) {
+            if(checkboxesSelector[i].checked === false) {
+                checkboxNotCheckedCounter++;
+            }
+        }
+        if(checkboxNotCheckedCounter === 2) {
+            checkBoxStatus.innerHTML = 'Оберіть хоча б один варіант';
+            checkAlertBorder.style.border = '1px solid red';
+            checkboxNotCheckedCounter = 0;
+        } else {
+            sectionActiveRemove();
+            sessnionsDiv[2].classList.add('section_active');
+        }
+    });
+
+
+    //send to google sheet
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby3q8HEVMB2cIDhl0PNhnDwIAcH9j4bHfxxuI9XcFK95L6GdJLA/exec';
+    const form = document.forms['to-ggl-sheet'];
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        sectionActiveRemove();
+        //activate result section
+        sessnionsDiv[3].classList.add('section_active');
+        nameInsert.forEach(function (item) {
+            item.innerHTML = kidName.value;
+        });
+        // set lenght of linear diagram. Data taken from <select> id
+        scale1.innerHTML = q1.value + '0%';
+        scale1.style.width = q1.value + '0%';
+        scale2.innerHTML = q2.value + '0%';
+        scale2.style.width = q2.value + '0%';
+        scale3.innerHTML = q3.value + '0%';
+        scale3.style.width = q3.value + '0%';
+        scale4.innerHTML = q4.value + '0%';
+        scale4.style.width = q4.value + '0%';
+        scale5.innerHTML = q5.value + '0%';
+        scale5.style.width = q5.value + '0%';
+        scale6.innerHTML = q6.value + '0%';
+        scale6.style.width = q6.value + '0%';
+        scale7.innerHTML = q7.value + '0%';
+        scale7.style.width = q7.value + '0%';
+        window.scrollTo(0, 0);
+        headingH1.style.display = 'none';
+
+        //compare answers and print them to result paragraph
+        const textData = [+q1.value, +q2.value, +q3.value, +q4.value, +q5.value, +q6.value, +q7.value];
+        const textDataBigger = ['креатор(ка)', 'пізнайко', 'енерджайзер(ка)', 'лідер(ка)', 'IT-геній(ка)', 'зірка', 'інноватор(ка)'];
+        const textDataLower = ['художній', 'інтелектуальний', 'фізичний', 'лідерський', 'технічний', 'артистичний', 'творчий'];
+        for(let i = 0; i < textData.length; i++) {
+            if(textData[i] >= 7) {
+                answers1.innerHTML += textDataBigger[i] + ', ';
+            } else {
+                answers2.innerHTML += textDataLower[i] + ', ';
+            }
+        }
+        let dataAnswers1 = answers1.innerHTML;
+        let dataAnswers2 = answers2.innerHTML;
+        dataAnswers1 = dataAnswers1.substring(',', dataAnswers1.length -2) + '.';
+        dataAnswers2 = dataAnswers2.substring(',', dataAnswers2.length -2) + '.';
+
+        answers1.innerHTML = dataAnswers1;
+        answers2.innerHTML = dataAnswers2;
+        if(answers1.innerHTML == '.') {
+            answers1holder.style.display = 'none';
+            forSure.style.display = 'none';
+        }
+        if(answers2.innerHTML == '.') {
+            answers2holder.style.display = 'none';
+        }
+
+        //depending on age -> show courses
+        const coursesInResult = document.querySelectorAll('.coursesInResult');
+        function coursesDevelopHTMLInsert(coursesHTML, developHTML) {
+            for(let i = 0; i < coursesInResult.length; i++) {
+                coursesInResult[i].innerHTML = coursesHTML;
+            }
+            develop.innerHTML = developHTML;
+        }
+        switch (age.value) {
+            case '3':
+                coursesDevelopHTMLInsert('Курс «МУЛЬТИ-МІКС 1.0» 3-5 років', 'Розвиток навичок конструювання та пізнавальний інтерес.');
+                break;
+            case '4':
+                coursesDevelopHTMLInsert('1. Курс «МУЛЬТИ-МІКС 1.0» 3-5 років <br> 2. Курс «ПРОГРАМУВАННЯ ТА АНГЛІЙСЬКА МОВА» 4-5 років ', '1. Розвиток навичок конструювання та пізнавального інтересу. <br> 2. Розвиток навичок програмування та знань англійської мови');
+                break;
+            case '5':
+                coursesDevelopHTMLInsert('1. Курс «МУЛЬТИ-МІКС 1.0» 3-5 років <br>2. Курс «ПРОГРАМУВАННЯ SCRATCH JUNIOR» 5-7 років <br>3. Курс «ART-ЛАБОРАТОРІЯ» 5-6 років<br>4. Курс «МУЛЬТИ-МІКС 2.0» 5-6 років<br>5. Курс «ПРОГРАМУВАННЯ ТА АНГЛІЙСЬКА МОВА» 4-5 років ',
+                    '1. Розвиток навичок конструювання та пізнавального інтересу. <br> 2. Розвиток навичок програмування, алгоритмічного мислення <br> 3. Розвиток художнього, творчого потенціалу, комунікативних здібностей.<br>4. Розвиток інженерного мислення та навичок конструювання<br>5. Розвиток навичок програмування та знань англійської мови');
+                break;
+            case '6':
+                coursesDevelopHTMLInsert('1. Курс «ПРОГРАМУВАННЯ SCRATCH JUNIOR» 5-7 років <br>2. Курс «ART-ЛАБОРАТОРІЯ» 5-6 років <br>3. Курс «МУЛЬТИ-МІКС 2.0» 5-6 років',
+                    '1. Розвиток навичок програмування, алгоритмічного мислення<br>2. Розвиток художнього, творчого потенціалу, комунікативних здібностей<br>3. Розвиток інженерного мислення та навичок конструювання');
+                break;
+            case '7':
+                coursesDevelopHTMLInsert('Курс «ПРОГРАМУВАННЯ SCRATCH JUNIOR» 5-7 років','Розвиток навичок програмування, алгоритмічного мислення')
+                break;
+            default:
+                break;
+        }
+
+
+
+        //start fetch and send to google sheet form data
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response)) //(showPopup(), response))
+            .catch(error => console.error('Error!', error.message));
+    })
+
+</script>
+</body>
+</html>

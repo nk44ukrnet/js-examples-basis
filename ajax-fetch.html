@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    const checkStatusAndParse = (response)=>{
+        if (!response.ok) {
+            throw new Error(`Status Code Error: ${response.status}`);
+        }
+        return response.json()
+    };
+    const printPlanets = (data) => {
+        console.log(' Lead 10 more planets');
+        for(let planets of data.results) {
+            console.log(planets.next);
+        }
+      return Promise.resolve(data.next);
+    };
+    const fetchNextPlanets = (url = 'https://swapi.co/api/plaents') =>{
+    return fetch(url);
+    };
+
+    fetchNextPlanets()
+        .then(checkStatusAndParse)
+        .then(printPlanets)
+        .then(fetchNextPlanets)
+        .then(checkStatusAndParse)
+        .then(printPlanets)
+        .then(fetchNextPlanets)
+        .catch((err) => {
+            console.log('Smth goes wrong with fatch');
+            console.log(err);
+        })
+</script>
+</body>
+</html>

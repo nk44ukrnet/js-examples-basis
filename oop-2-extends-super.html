@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    class Pet {
+        constructor(name, age) {
+            console.log('in pet constructor');
+            this.name = name;
+            this.age = age;
+        }
+        eat(){
+            console.log(this.name + ' is eating');
+        }
+    }
+
+    class Cat extends Pet{
+        constructor(name, age, livesLeft = 9) {
+            console.log('in cat constructor');
+            super(name,age);
+            this.livesLeft = livesLeft;
+        }
+        meow(){
+            return `MEOWWW!!`;
+        }
+    }
+
+    class Dog extends Pet{
+        bark(){
+            return "WOOFFF!!";
+        }
+    }
+
+
+</script>
+</body>
+</html>

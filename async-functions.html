@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    // function getData() {
+    //     axios.get('https://swapi.co/api/plaents/')
+    //     console.log(data);
+    // }
+
+    async function greet() {
+        return 'hello';
+    }
+
+    greet().then((val) => {
+        console.log('Promise resolved with: ', val);
+    });
+
+    async function add(x, y) {
+        if (typeof x !== 'number' || typeof y !== 'number') {
+            throw 'X and Y must be numbers';
+        }
+        return x + y;
+    }
+
+    // add('e', '3').then(val => {
+    //     console.log('Promise Resolved with: ', val)
+    // }).catch(err => {
+    //     console.log('Promise Rejected with: ', err);
+    // })
+
+    // AWAIT !!!!!!!!!
+
+    // function getPlanets() {
+    //     return axios.get('https://swapi.co/api/planets/')
+    // }
+
+    // getPlanets().then((res) => {
+    //     console.log(res.data);
+    // });
+
+    async function getPlanets() {
+        try {
+            const res = await axios.get('https://swapi.co/api/planets/');
+            console.log(res.data);
+        } catch (err) {
+            console.log('In catch!!!', err);
+        }
+    }
+
+    getPlanets()
+</script>
+</body>
+</html>

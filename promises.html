@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {
+            transition: all 1.25s ease;
+        }
+    </style>
+</head>
+<body>
+<button>CLICK ME!</button>
+<script>
+    //const btn = document.querySelector('button');
+    // setTimeout(() => {
+    //     btn.style.transform = 'translateX(10px)';
+    //     setTimeout(()=>{
+    //         btn.style.transform = 'translateX(20px)';
+    //         setTimeout(()=>{
+    //             btn.style.transform = 'translateX(30px)';
+    //             setTimeout(()=>{
+    //                 btn.style.transform = 'translateX(50px)';
+    //             }, 1000)
+    //         }, 1000)
+    //     }, 1000)
+    // }, 1000);
+
+    // const moveX = (element, amount, delay, onSuccess, onFailure) => {
+    //     const bodyBoundary = document.body.clientWidth;
+    //     const currentLeft = element.getBoundingClientRect().left;
+    //     const elRight = element.getBoundingClientRect().right;
+    //     if (elRight + amount > bodyBoundary) {
+    //         onFailure();
+    //     } else {
+    //         setTimeout(() => {
+    //             element.style.transform = `translateX(${currentLeft + amount}px)`;
+    //             onSuccess();
+    //         }, delay);
+    //     }
+    // };
+
+    // moveX(btn, 100, 1000, () => {
+    //     //success
+    //     moveX(btn, 400, 1000, () => {
+    //         //success
+    //         moveX(btn, 700, 1000, ()=>{
+    //             //success
+    //             console.log('PLEASE, STOP IT!');
+    //         }, ()=>{
+    //             //fail
+    //             alert('CANNOT MOVE FURTHER!');
+    //         })
+    //     }, () => {
+    //         //fail
+    //         alert('CANNOT MOVE FURTHER!');
+    //     })
+    // }, () => {
+    //     //fail
+    //     alert('CANNOT MOVE FURTHER!');
+    // })
+    const makeDogPromise = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const rand = Math.random();
+                if (rand < 0.5) {
+                    resolve();
+                } else {
+                    reject();
+                }
+            }, 1000);
+        });
+    };
+
+    // makeDogPromise().then(() => {
+    //     console.log('We got a dong');
+    // })
+    //     .catch(() => {
+    //         console.log('No dog');
+    //     });
+
+    // const fakeRequest = (url) => {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() =>{
+    //                 const pages = {
+    //                     '/users': [
+    //                         {id: 1, username: 'Bilbo'},
+    //                         {id: 5, username: 'Esmeralda'}
+    //                     ],
+    //                     '/about': 'this is the about page!'
+    //                 };
+    //                 const data = pages[url];
+    //                 if(data) {
+    //                     resolve({status: 200, data});
+    //                 } else {
+    //                    reject({status: 404});
+    //                 }
+    //
+    //         }, 1000)
+    //     })
+    // };
+    //
+    // fakeRequest('/users').then((res) => {
+    //     console.log('Status code: ', res.status);
+    //     console.log('Data: ', res.data);
+    //     console.log('Request worked');
+    // }).catch((res)=>{
+    //     console.log(res.status);
+    //     console.log('Request failed');
+    // });
+
+    // fakeRequest('/dogs').then((res) => {
+    //     console.log('Status code: ', res.status);
+    //     console.log('Data: ', res.data);
+    //     console.log('Request worked');
+    // }).catch((res)=>{
+    //     console.log(res.status);
+    //     console.log('Request failed');
+    // })
+
+    //This is a FAKE Http Request Function
+    //It takes 1 second to resolve or reject the promise, depending on the url that is passed in
+    const fakeRequest = (url) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const pages = {
+                    '/users': [
+                        {id: 1, username: 'Bilbo'},
+                        {id: 5, username: 'Esmerelda'}
+                    ],
+                    '/users/1': {
+                        id: 1,
+                        username: 'Bilbo',
+                        upvotes: 360,
+                        city: 'Lisbon',
+                        topPostId: 454321
+                    },
+                    '/users/5': {
+                        id: 5,
+                        username: 'Esmerelda',
+                        upvotes: 571,
+                        city: 'Honolulu'
+                    },
+                    '/posts/454321': {
+                        id: 454321,
+                        title:
+                            'Ladies & Gentlemen, may I introduce my pet pig, Hamlet'
+                    },
+                    '/about': 'This is the about page!'
+                };
+                const data = pages[url];
+                if (data) {
+                    resolve({status: 200, data}); //resolve with a value!
+                } else {
+                    reject({status: 404}); //reject with a value!
+                }
+            }, 1000);
+        });
+    };
+
+    // fakeRequest('/users').then(res => {
+    //     const id = res.data[0].id;
+    //     console.log(res);
+    //     return fakeRequest(`/users/${id}`);
+    // })
+    //     .then(res => {
+    //         const postId = res.data.topPostId;
+    //         console.log(res);
+    //         return fakeRequest(`/posts/${postId}`);
+    //     })
+    //     .then(res => {
+    //         console.log(res);
+    //     })
+    //     .catch(err => {
+    //         console.log('Oh no!', err);
+    //     })
+
+    // fakeRequest('/users')
+    //     .then((res) => {
+    //         console.log(res);
+    //         const id = res.data[0].id;
+    //         return fakeRequest(`/users/${id}`);
+    //     })
+    //     .then((res) => {
+    //         console.log(res);
+    //         const postId = res.data.topPostId;
+    //         return fakeRequest(`/posts/${postId}`);
+    //     })
+    //     .then((res) => {
+    //         console.log(res);
+    //     })
+    //     .catch((err) => {
+    //         console.log('OH NO!', err);
+    //     });
+
+    // ************************************************
+    // ATTEMPT 2 (deliberate error to illustrate CATCH)
+    // ************************************************
+    // fakeRequest('/users')
+    // 	.then((res) => {
+    // 		console.log(res);
+    // 		const id = res.data[0].id;
+    // 		return fakeRequest(`/useALSKDJrs/${id}`); //INVALID URL, CATCH WILL RUN!
+    // 	})
+    // 	.then((res) => {
+    // 		console.log(res);
+    // 		const postId = res.data.topPostId;
+    // 		return fakeRequest(`/posts/${postId}`);
+    // 	})
+    // 	.then((res) => {
+    // 		console.log(res);
+    // 	})
+    // 	.catch((err) => {
+    // 		console.log('OH NO!', err);
+    // 	});
+
+
+    //REFACTORING
+
+    const moveX = (element, amount, delay) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const bodyBoundary = document.body.clientWidth;
+                const elRight = element.getBoundingClientRect().right;
+                const currLeft = element.getBoundingClientRect().left;
+                if (elRight + amount > bodyBoundary) {
+                    reject({bodyBoundary, elRight, amount});
+                }
+                else {
+                    element.style.transform = `translateX(${currLeft + amount}px)`;
+                    resolve();
+                }
+            }, delay);
+        });
+    };
+
+    const btn = document.querySelector('button');
+
+    moveX(btn, 300, 100)
+        .then(()=>(moveX(btn, 300, 200)))
+        .then(()=>(moveX(btn, 300, 300)))
+        .then(()=>(moveX(btn, 300, 400)))
+        .then(()=>(moveX(btn, 300, 500)))
+        .then(()=>(moveX(btn, 300, 600)))
+        .then(()=>(moveX(btn, 300, 700)))
+        .then(()=>(moveX(btn, 300, 800)))
+        .then(()=>(moveX(btn, 300, 900)))
+        .then(()=>(moveX(btn, 300, 1000)))
+        .catch(({bodyBoundary, elRight, amount})=>{
+            console.log(`Body is ${bodyBoundary}px width`);
+            console.log(`Element is at ${elRight}px, ${amount} is too large`);
+        })
+
+
+    //This function moves an element "amount" number of pixels after a delay.
+    //If the element will stay on screen, we move the element and call the onSuccess callback function
+    //If the element will move off screen, we do not move the element and instead call the onFailure callback
+    // const moveX = (element, amount, delay, onSuccess, onFailure) => {
+    // 	setTimeout(() => {
+    // 		const bodyBoundary = document.body.clientWidth;
+    // 		const elRight = element.getBoundingClientRect().right;
+    // 		const currLeft = element.getBoundingClientRect().left;
+    // 		if (elRight + amount > bodyBoundary) {
+    // 			onFailure();
+    // 		}
+    // 		else {
+    // 			element.style.transform = `translateX(${currLeft + amount}px)`;
+    // 			onSuccess();
+    // 		}
+    // 	}, delay);
+    // };
+
+    // LOOK AT THIS UGLY MESS!
+    // moveX(
+    // 	btn,
+    // 	300,
+    // 	1000,
+    // 	() => {
+    // 		//success callback
+    // 		moveX(
+    // 			btn,
+    // 			300,
+    // 			1000,
+    // 			() => {
+    // 				//success callback
+    // 				moveX(
+    // 					btn,
+    // 					300,
+    // 					1000,
+    // 					() => {
+    // 						//success callback
+    // 						moveX(
+    // 							btn,
+    // 							300,
+    // 							1000,
+    // 							() => {
+    // 								//success callback
+    // 								moveX(
+    // 									btn,
+    // 									300,
+    // 									1000,
+    // 									() => {
+    // 										//success callback
+    // 										alert('YOU HAVE A WIDE SCREEN!');
+    // 									},
+    // 									() => {
+    // 										//failure callback
+    // 										alert('CANNOT MOVE FURTHER!');
+    // 									}
+    // 								);
+    // 							},
+    // 							() => {
+    // 								//failure callback
+    // 								alert('CANNOT MOVE FURTHER!');
+    // 							}
+    // 						);
+    // 					},
+    // 					() => {
+    // 						//failure callback
+    // 						alert('CANNOT MOVE FURTHER!');
+    // 					}
+    // 				);
+    // 			},
+    // 			() => {
+    // 				//failure callback
+    // 				alert('CANNOT MOVE FURTHER!');
+    // 			}
+    // 		);
+    // 	},
+    // 	() => {
+    // 		//failure callback
+    // 		alert('CANNOT MOVE FURTHER!');
+    // 	}
+    // );
+
+
+</script>
+</body>
+</html>
