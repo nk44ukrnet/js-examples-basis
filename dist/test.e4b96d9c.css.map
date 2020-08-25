@@ -1,0 +1,1 @@
+{"version":3,"sources":["test.less"],"names":[],"mappings":"AAAA;EACE,gCAAA;;AAEF;EACE,eAAA","file":"test.e4b96d9c.css","sourceRoot":"..\\p3-custom-video-player","sourcesContent":[".body {\n  background-color: red !important;\n}\nh1 {\n  font-size: 20px;\n}"]}

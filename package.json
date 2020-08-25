@@ -1,0 +1,25 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "p3-custom-video-player/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nk44ukrnet/js-examples-basis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nk44ukrnet/js-examples-basis/issues"
+  },
+  "homepage": "https://github.com/nk44ukrnet/js-examples-basis#readme",
+  "devDependencies": {
+    "less": "^3.12.2"
+  },
+  "dependencies": {
+    "test.less": "^0.1.0"
+  }
+}

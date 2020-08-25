@@ -2,11 +2,197 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f01f50a-322a-4169-b81c-c6218fec1737" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/p2-js-movie-seat-booking/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/p2-js-movie-seat-booking/original.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/p2-js-movie-seat-booking/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/p2-js-movie-seat-booking/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.cache/15/d236a8b1560b87db93d73737667dd4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.cache/1f/07bfef57495f464ba66c0b83ffb45b.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.cache/2c/0ed9e71bad98b9f54f51225290497a.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.cache/3c/2f0917ead7aa3cdc04163c4ff44bc5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.cache/53/1d431188304d5bda55f15fbc9ce2e3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.cache/67/55f05da8f917077d2ff0a63674bd1f.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.cache/70/29917e2d9d1c095409ac7c2b331de5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.cache/a8/b8023da34d0d590ff6342d446fae8a.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.cache/c3/c8553b8e395e51b7657656298a8a6f.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.cache/d5/ee2fc6dea5d115f4f57416b6dbf349.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.cache/f1/a03024673cd84a36b8fb434da6e129.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.cache/f2/6936a7b7443f38f504a55ff7363840.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bp-1-timer-with-play-btn/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bp-1-timer-with-play-btn/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/gone.1b10ad3e.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/poster.430e6e78.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/progress.5e8b909c.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/progress.5e8b909c.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/progress.5e8b909c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/progress.5e8b909c.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/script.75da7f30.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/script.75da7f30.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/script.75da7f30.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/script.75da7f30.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/styles.8986bff4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/styles.8986bff4.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/styles.8986bff4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/styles.8986bff4.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test.e4b96d9c.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test.e4b96d9c.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test.e4b96d9c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test.e4b96d9c.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/Gruntfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/add-default-options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/cache.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/error-reporting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/file-manager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/image-size.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/log-listener.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/plugin-loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/environment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/file-manager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/fs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/image-size.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/lessc-helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/plugin-loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/url-file-manager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/contexts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/data/colors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/data/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/data/unit-conversions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/default-options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/environment/abstract-file-manager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/environment/abstract-plugin-loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/environment/environment-api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/environment/environment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/environment/file-manager-api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/boolean.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/color-blending.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/color.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/data-uri.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/default.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/function-caller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/function-registry.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/math-helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/math.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/number.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/string.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/svg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/import-manager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/less-error.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/logger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/parse-tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/parse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/parser/chunker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/parser/parser-input.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/parser/parser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/plugin-manager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/render.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/source-map-builder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/source-map-output.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/transform-tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/anonymous.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/assignment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/atrule.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/attribute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/call.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/color.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/combinator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/comment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/condition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/debug-info.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/declaration.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/detached-ruleset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/dimension.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/element.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/expression.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/extend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/import.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/javascript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/js-eval-node.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/keyword.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/media.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/mixin-call.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/mixin-definition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/namespace-value.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/negative.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/node.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/operation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/paren.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/property.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/quoted.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/ruleset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/selector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/unicode-descriptor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/unit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/url.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/value.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/variable-call.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/variable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/extend-visitor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/import-sequencer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/import-visitor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/join-selector-visitor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/set-tree-visibility-visitor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/to-css-visitor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/visitor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/less/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/alerts.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/badges.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/breadcrumbs.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/button-groups.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/carousel.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/close.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/code.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/component-animations.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/dropdowns.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/forms.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/glyphicons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/grid.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/input-groups.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/jumbotron.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/labels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/list-group.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/media.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/modals.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/navbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/navs.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/normalize.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/pager.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/pagination.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/panels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/popovers.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/print.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/progress-bars.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/responsive-embed.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/responsive-utilities.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/scaffolding.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/tables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/theme.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/thumbnails.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/tooltip.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/type.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/utilities.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/lib/wells.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/test.less/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p3-custom-video-player/img/poster.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p3-custom-video-player/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p3-custom-video-player/progress.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p3-custom-video-player/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p3-custom-video-player/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p3-custom-video-player/test.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p3-custom-video-player/videos/gone.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,10 +204,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Less File" />
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Less File" />
       </list>
     </option>
   </component>
@@ -35,13 +221,16 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1c2SK3Msgs5eJLqJKvpsG3j4C5Z" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -73,11 +262,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+  <component name="RunManager" selected="JavaScript Debug.index.html (2)">
     <configuration name="events.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test/events.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test/p2-js-movie-seat-booking/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test/bp-1-timer-with-play-btn/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test/p1/index.html" useBuiltInWebServerPort="true">
@@ -86,16 +278,13 @@
     <configuration name="script.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/p2-js-movie-seat-booking/script.js" working-dir="$PROJECT_DIR$/p2-js-movie-seat-booking">
       <method v="2" />
     </configuration>
-    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test.js" working-dir="$PROJECT_DIR$">
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (2)" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="Node.js.script.js" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.events.html" />
-        <item itemvalue="Node.js.test.js" />
       </list>
     </recent_temporary>
   </component>
@@ -148,6 +337,8 @@
       <workItem from="1597824451957" duration="11860000" />
       <workItem from="1597993004407" duration="15607000" />
       <workItem from="1598096771971" duration="14519000" />
+      <workItem from="1598274516106" duration="6518000" />
+      <workItem from="1598347831140" duration="4627000" />
     </task>
     <servers />
   </component>
@@ -159,10 +350,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
